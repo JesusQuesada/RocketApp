@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         val nowSeconds: Long
             get() = Calendar.getInstance().timeInMillis / 1000
     }
-    
+
     enum class TimerState{
         Stopped, Paused, Running
     }
