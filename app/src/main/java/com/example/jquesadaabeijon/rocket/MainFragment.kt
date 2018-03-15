@@ -25,12 +25,8 @@ import org.jetbrains.anko.support.v4.toast
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        main_button.setOnClickListener {
+        start.setOnClickListener {
             toast("Mensaje: ${"Iniciando cuenta atrás... "}")
-
-            val datos = Intent(activity, TimerActivity::class.java)
-            datos.putExtra("key1", "valor1")
-            startActivity(datos)
         }
     }
 }

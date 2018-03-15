@@ -28,21 +28,19 @@ class MainActivity : AppCompatActivity() {
     private var timerLengthSeconds: Long = 0
     private var timerState = TimerState.Stopped
 
-    private var secondsRemaining: Long = 0
+    private var secondsRemaining: Long = 10
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
         supportActionBar?.setIcon(R.drawable.ic_timer)
         supportActionBar?.title = "      Falcon Heavy Launcher"
+        startTimer()
+        timerState =  TimerState.Running
 
         start.setOnClickListener {v ->
             startTimer()
             timerState =  TimerState.Running
-            val datos = Intent(this, TimerActivity::class.java)
-            datos.putExtra("key1", "valor1")
-            startActivity(datos)
         }
     }
 
@@ -64,17 +62,17 @@ class MainActivity : AppCompatActivity() {
         val secondsInMinuteUntilFinished = secondsRemaining - minutesUntilFinished * 60
         val secondsStr = secondsInMinuteUntilFinished.toString()
         textView_countdown.text = "$minutesUntilFinished:${if (secondsStr.length == 2) secondsStr else "0" + secondsStr}"
-        progress_countdown.progress = (timerLengthSeconds - secondsRemaining).toInt()
     }
 
     private fun onTimerFinished(){
         timerState = TimerState.Stopped
 
-        progress_countdown.progress = 0
-
         PrefUtil.setSecondsRemaining(timerLengthSeconds, this)
         secondsRemaining = timerLengthSeconds
 
         updateCountdownUI()
+        val datos = Intent(this, TimerActivity::class.java)
+        datos.putExtra("key1", "valor1")
+        startActivity(datos)
     }
 }
