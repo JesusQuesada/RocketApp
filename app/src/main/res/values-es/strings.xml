@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Falcon Heavy Launcher</string>
     <string name="txt">Iniciar cuenta atrás</string>
+    <string name="txt2">Iniciando cuenta atrás...</string>
     <string name="title_activity_visor">Visor</string>
-    <string name="second_fragment">00:10</string>
+    <string name="second_fragment">10</string>
     <string name="hint">Mensaje</string>
     <string name="hello_blank_fragment">Blanco</string>
     <string name="button">Iniciar</string>

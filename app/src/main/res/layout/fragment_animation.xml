@@ -1,0 +1,17 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jquesadaabeijon.rocket.AnimationFragment">
+
+    <ImageView
+        android:id="@+id/rocket"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@android:color/transparent"
+        android:layout_gravity="bottom|center_horizontal"
+        android:src="@drawable/ic_rocket"/>
+
+</FrameLayout>

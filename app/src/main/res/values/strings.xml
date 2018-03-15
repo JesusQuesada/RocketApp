@@ -5,7 +5,8 @@
     <string name="button">Start</string>
     <string name="title_activity_visor">Visor</string>
     <string name="txt">Start countdown</string>
+    <string name="txt2">Starting countdown...</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="second_fragment">00:10</string>
+    <string name="second_fragment">10</string>
     <string name="boton_start">Start</string>
 </resources>

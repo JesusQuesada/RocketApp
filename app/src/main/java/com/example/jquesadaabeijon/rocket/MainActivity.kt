@@ -1,15 +1,9 @@
 package com.example.jquesadaabeijon.rocket
 
 import android.content.Intent
-import android.app.PendingIntent
-import android.content.Context
 import android.os.CountDownTimer
-import android.view.Menu
-import android.view.MenuItem
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.example.jquesadaabeijon.rocket.PrefUtil
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_main.*
 import java.util.*
 
@@ -35,8 +29,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         supportActionBar?.setIcon(R.drawable.ic_timer)
         supportActionBar?.title = "      Falcon Heavy Launcher"
-        startTimer()
-        timerState =  TimerState.Running
 
         start.setOnClickListener {v ->
             startTimer()
@@ -71,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         secondsRemaining = timerLengthSeconds
 
         updateCountdownUI()
-        val datos = Intent(this, TimerActivity::class.java)
+        val datos = Intent(this, AnimationActivity::class.java)
         datos.putExtra("key1", "valor1")
         startActivity(datos)
     }

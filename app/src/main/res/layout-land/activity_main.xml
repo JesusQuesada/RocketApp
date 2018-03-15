@@ -22,14 +22,14 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/fragmentB"
-        android:name="com.example.jquesadaabeijon.rocket.TimerFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="29dp"
+        android:name="com.example.jquesadaabeijon.rocket.AnimationFragment"
+        android:layout_width="171dp"
+        android:layout_height="309dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/fragmentA"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout="@layout/fragment_timer" />
+        tools:layout="@layout/fragment_animation"
+        tools:layout_editor_absoluteY="0dp" />
 
 </android.support.constraint.ConstraintLayout>
